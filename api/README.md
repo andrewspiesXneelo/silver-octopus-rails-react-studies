@@ -1,24 +1,7 @@
-# README
+# RUBY API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby api generated using `rails new api --api` command.
 
-Things you may want to cover:
+## NOTES
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Will collect notes, gotchas and interesting information learned here for future reference.
