@@ -4,15 +4,21 @@ interface ErrorProps {
   name: any;
   message: any;
   stack?: any;
+  user_message?: any;
 }
 
-const Error = ({ name, message, stack }: ErrorProps) => {
+const Error = ({ name, message, stack, user_message }: ErrorProps) => {
   return (
     <div className="error-container">
-      <h3>Oops we have encounterd an error...</h3>
-      <p>{name}</p>
-      <p>{message}</p>
-      <p>{stack}</p>
+      <h2>Oops! Well this is embarrassing...</h2>
+      <p>{name ? name : "Error"}</p>
+      <p>{message ? message : "no message"}</p>
+      <p>
+        {user_message
+          ? user_message
+          : "Error has occured please contact support"}
+      </p>
+      <p>{stack ? stack : ""}</p>
     </div>
   );
 };

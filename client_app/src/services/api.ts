@@ -37,10 +37,19 @@ export default class APIService {
       body: data ? JSON.stringify(data) : undefined,
     };
     return await fetch(`${this.apiUrl}/${path}`, requestConfig)
-      .then(response => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          const message = response.status + ' ' + response.statusText;
+          const error = new Error(message);
+          return dispatchEvent(new CustomEvent('error', { detail: error }));
+        }
+        return response.json();
+      })
       .then(data => data)
       .catch((error) => {
-        dispatchEvent(new CustomEvent('error', { detail: error }));
+        console.log("API error:", error);
+        return dispatchEvent(new CustomEvent('error', { detail: error }));
       });
+
   }
 }

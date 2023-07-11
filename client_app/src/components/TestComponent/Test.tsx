@@ -8,6 +8,7 @@ const Test = () => {
 
   useEffect(() => {
     const userSrv = new UserService();
+    throw new Error("Test Error");
     const fetchUsers = async () => {
       return userSrv.getUsers().then((res) => res);
     };
