@@ -49,6 +49,7 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
       },
     ];
     this.setErrorEventListeners(listeners);
+    this.setClearErrorOnNavigationListener();
   }
 
   /**
@@ -93,6 +94,29 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
         });
       }) as EventListener); // Callback function is coerced to type of EventListener because of "typescript" reasons. :facepalm:
     }
+  }
+
+  /**
+   * setClearErrorOnNavigationListener()
+   *
+   * Sets navigation listeners on the window object to clear errors when user goes back in history
+   *
+   * @returns void
+   */
+
+  setClearErrorOnNavigationListener() {
+    window.addEventListener("popstate", (event) => {
+      console.log(event);
+      this.setState({
+        hasError: false,
+        error: {
+          message: "",
+          name: "",
+          stack: "",
+          user_message: "",
+        },
+      });
+    });
   }
 
   /**
