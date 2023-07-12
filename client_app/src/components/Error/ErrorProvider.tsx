@@ -1,12 +1,14 @@
 import { Component } from "react";
-import Error from "./Error";
 import {
   ErrorProps,
   ErrorState,
   ErrorListener,
   CustomErrorEvent,
 } from "./ErrorTypes";
+import Error from "./Error";
+import UnhandledError from "./UnhandledError";
 
+// we can define error messages in some form if you don't want to load different components
 enum ErrorUserMessages {
   ERROR = "Seems to be an issue, please try again later. If the issue persists, please contact support.",
   UNHANDLED_REJECTION_ERROR = "Error with request, please try again later. If the issue persists, please contact support.",
@@ -18,32 +20,61 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
 
     this.state = {
       hasError: false,
-      error: undefined,
+      error: {
+        message: "",
+        name: "",
+        stack: "",
+        user_message: "",
+        error_component: <Error name={""} message={""} />,
+      },
     };
     this.init();
   }
+
+  /**
+   * init()
+   *
+   * Define errors listeners and runs function to set them on the window object
+   *
+   * @returns void
+   */
 
   init() {
     const listeners: ErrorListener[] = [
       {
         name: "Error",
         type: "error",
+        component: (
+          <Error name={""} message={""} stack={""} user_message={""} />
+        ),
       },
       {
         name: "Unhandled Rejection Error",
         type: "unhandledrejection",
+        component: (
+          <UnhandledError name={""} message={""} stack={""} user_message={""} />
+        ),
       },
     ];
     this.setErrorEventListeners(listeners);
   }
 
+  /**
+   * setErrorEventListeners()
+   *
+   * Sets error event listeners on the window object
+   *
+   * @param listeners ErrorListener[] - Array of ErrorListener objects
+   * @returns void
+   */
+
   setErrorEventListeners(listeners: ErrorListener[]) {
     for (const listener of listeners) {
-      // Callback function is coerced to type of EventListener because of "typescript" reasons...
       window.addEventListener(listener.type, ((event: CustomErrorEvent) => {
         let message = "";
         let stack = "";
 
+        // Need to check if it's a custom error event or custom error with a response - can improve this
         if (!event.detail) {
           message = event.error.message;
           stack = event.error.stack
@@ -66,12 +97,21 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
             name,
             stack,
             user_message,
+            error_component: listener.component,
           },
         });
-      }) as EventListener);
+      }) as EventListener); // Callback function is coerced to type of EventListener because of "typescript" reasons. :facepalm:
     }
   }
 
+  /**
+   * setErrorMessage()
+   *
+   * Sets the user message based on the error type
+   *
+   * @param type string - Error type
+   * @returns string - User message
+   */
   setErrorMessage(type: string) {
     switch (type) {
       case "unhandledrejection":
@@ -83,16 +123,16 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
     }
   }
 
+  /**
+   * render()
+   *
+   * Renders the error component if there is an error
+   *
+   * @returns JSX.Element - Error component or children components
+   */
   render() {
     if (this.state.hasError) {
-      return (
-        <Error
-          message={this.state.error?.message}
-          name={this.state.error?.name}
-          stack={this.state.error?.stack}
-          user_message={this.state.error?.user_message}
-        />
-      );
+      return this.state.error.error_component;
     } else {
       return this.props.children;
     }

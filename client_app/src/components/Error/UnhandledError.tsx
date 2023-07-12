@@ -5,11 +5,11 @@ interface ErrorProps {
   user_message?: string;
 }
 
-const Error = ({ name, message, stack, user_message }: ErrorProps) => {
+const UnhandledError = ({ name, message, stack, user_message }: ErrorProps) => {
   return (
     <div className="error-container">
-      <h2>Oops! Well this is embarrassing...</h2>
-      <p>{name ? name : "Error"}</p>
+      <h2>Ouch that hurt! Unhandled Rejection Error</h2>
+      <p>{name ? name : "Unhandled Error"}</p>
       <p>{message ? message : "no message"}</p>
       <p>
         {user_message
@@ -21,4 +21,4 @@ const Error = ({ name, message, stack, user_message }: ErrorProps) => {
   );
 };
 
-export default Error;
+export default UnhandledError;

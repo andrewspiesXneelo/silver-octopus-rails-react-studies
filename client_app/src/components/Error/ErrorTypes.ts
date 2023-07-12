@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface CustomErrorEvent extends CustomEvent {
   detail: CustomError;
   error: CustomError;
@@ -5,7 +7,7 @@ export interface CustomErrorEvent extends CustomEvent {
 
 export interface ErrorState {
   hasError: boolean;
-  error: CustomError | undefined;
+  error: CustomError;
 }
 
 export interface ErrorProps {
@@ -15,6 +17,7 @@ export interface ErrorProps {
 export interface ErrorListener {
   name: string;
   type: string;
+  component: ReactNode;
 }
 
 interface CustomError extends Error {
@@ -22,4 +25,5 @@ interface CustomError extends Error {
   name: string;
   stack?: string;
   user_message?: string;
+  error_component?: ReactNode;
 }
