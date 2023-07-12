@@ -7,7 +7,7 @@ import {
 } from "./ErrorTypes";
 import Error from "./Error";
 
-// we can define error messages in some form if you don't want to load different components
+// We can define error messages in some form if you don't want to load different components
 enum ErrorUserMessages {
   ERROR = "Seems to be an issue, please try again later. If the issue persists, please contact support.",
   UNHANDLED_REJECTION_ERROR = "Error with request, please try again later. If the issue persists, please contact support.",
@@ -36,7 +36,6 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
    *
    * @returns void
    */
-
   init() {
     const listeners: ErrorListener[] = [
       {
@@ -60,7 +59,6 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
    * @param listeners ErrorListener[] - Array of ErrorListener objects
    * @returns void
    */
-
   setErrorEventListeners(listeners: ErrorListener[]) {
     for (const listener of listeners) {
       window.addEventListener(listener.type, ((event: CustomErrorEvent) => {
@@ -73,21 +71,24 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
           stack = event.error.stack
             ? event.error.stack
             : "No stack trace available";
+
+          console.log("was event.error");
         } else {
           message = event.detail.message;
           stack = event.detail.stack
             ? event.detail.stack
             : "No stack trace available";
+
+          console.log("was event.detail");
         }
 
-        const name = event.type.toUpperCase();
-        const user_message = this.setErrorMessage(event.type);
+        const user_message = this.setErrorMessage(event.type); // get error from enum based on type -> in future we could get it from a localization file
 
         this.setState({
           hasError: true,
           error: {
             message,
-            name,
+            name: event.type,
             stack,
             user_message,
           },
@@ -103,7 +104,6 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
    *
    * @returns void
    */
-
   setClearErrorOnNavigationListener() {
     window.addEventListener("popstate", (event) => {
       console.log(event);

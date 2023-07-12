@@ -17,8 +17,18 @@ const Test = () => {
       return userSrv.getUsers().then((res) => res);
     };
     fetchUsers().then((res) => setUsers(res));
-    throw new Error("Test Error");
-    // Throw error to test -> throw new Error("Test Error");
+    // Throw error to test ->
+    // Dispatch Custom error event -> dispatchEvent(new CustomEvent("error", { detail: "error" }));
+    // throw new Error("Test Error");
+    // dispatchEvent(
+    //   new CustomEvent("error", {
+    //     detail: {
+    //       message: "error found!",
+    //       name: "error",
+    //       stack: window.location.href,
+    //     },
+    //   })
+    // );
   }, []);
 
   return (
