@@ -47,7 +47,6 @@ export default class APIService {
       })
       .then(data => data)
       .catch((error) => {
-        console.log("API error:", error);
         return dispatchEvent(new CustomEvent('error', { detail: error }));
       });
 
