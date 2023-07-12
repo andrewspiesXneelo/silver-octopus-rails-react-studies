@@ -9,7 +9,7 @@ const Error = ({ name, message, stack, user_message }: ErrorProps) => {
   return (
     <div className="error-container">
       <h2>Oops! Well this is embarrassing...</h2>
-      <p>{name ? name : "Error"}</p>
+      <p>{name ? name.toUpperCase() : "ERROR"}</p>
       <p>{message ? message : "no message"}</p>
       <p>
         {user_message
