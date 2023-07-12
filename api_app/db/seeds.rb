@@ -26,6 +26,22 @@ users = User.create(
       issues: [2], 
       projects: [2], 
       teams: [2],
+    },
+    {
+      name: "Larry Bundy", 
+      email: "larry@bundy.com",
+      avatar: "/images/larry.jpg",
+      issues: [], 
+      projects: [2], 
+      teams: [2],
+    },
+    {
+      name: "Kevin Bevin", 
+      email: "kev@bev.com",
+      avatar: "/images/kev.jpg",
+      issues: [], 
+      projects: [1], 
+      teams: [1],
     }
   ]
 )
@@ -36,7 +52,7 @@ teams = Team.create(
       name: "Berry Blast Inc", 
       description: "The Berry Blast team - writers of juicy code.", 
       avatar: "/images/teams/berryblast.jpg",
-      users: [1],
+      users: [1, 4],
       userRoles: [
         {
           userID: 1,
@@ -50,7 +66,7 @@ teams = Team.create(
       name: "Ring Bearers",
       description: "The Ring Bearers team - fixing bugs in the shadow of Mt. Doom",
       avatar: "/images/teams/ringbearers.jpg",
-      users: [1, 2],
+      users: [1, 2, 3],
       userRoles: [
         {
           userID: 1,
