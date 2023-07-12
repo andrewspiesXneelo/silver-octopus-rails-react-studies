@@ -11,13 +11,12 @@ export interface ErrorState {
 }
 
 export interface ErrorProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export interface ErrorListener {
   name: string;
   type: string;
-  component: ReactNode;
 }
 
 interface CustomError extends Error {
@@ -25,5 +24,4 @@ interface CustomError extends Error {
   name: string;
   stack?: string;
   user_message?: string;
-  error_component?: ReactNode;
 }

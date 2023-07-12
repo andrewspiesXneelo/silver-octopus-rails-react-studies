@@ -17,6 +17,7 @@ const Test = () => {
       return userSrv.getUsers().then((res) => res);
     };
     fetchUsers().then((res) => setUsers(res));
+    throw new Error("Test Error");
     // Throw error to test -> throw new Error("Test Error");
   }, []);
 

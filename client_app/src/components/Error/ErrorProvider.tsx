@@ -6,7 +6,6 @@ import {
   CustomErrorEvent,
 } from "./ErrorTypes";
 import Error from "./Error";
-import UnhandledError from "./UnhandledError";
 
 // we can define error messages in some form if you don't want to load different components
 enum ErrorUserMessages {
@@ -25,7 +24,6 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
         name: "",
         stack: "",
         user_message: "",
-        error_component: <Error name={""} message={""} />,
       },
     };
     this.init();
@@ -44,16 +42,10 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
       {
         name: "Error",
         type: "error",
-        component: (
-          <Error name={""} message={""} stack={""} user_message={""} />
-        ),
       },
       {
         name: "Unhandled Rejection Error",
         type: "unhandledrejection",
-        component: (
-          <UnhandledError name={""} message={""} stack={""} user_message={""} />
-        ),
       },
     ];
     this.setErrorEventListeners(listeners);
@@ -97,7 +89,6 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
             name,
             stack,
             user_message,
-            error_component: listener.component,
           },
         });
       }) as EventListener); // Callback function is coerced to type of EventListener because of "typescript" reasons. :facepalm:
@@ -132,7 +123,14 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
    */
   render() {
     if (this.state.hasError) {
-      return this.state.error.error_component;
+      return (
+        <Error
+          name={this.state.error.name}
+          message={this.state.error.message}
+          stack={this.state.error.stack}
+          user_message={this.state.error.user_message}
+        />
+      );
     } else {
       return this.props.children;
     }

@@ -1,6 +1,6 @@
 interface ErrorProps {
-  name: string;
-  message: string;
+  name?: string;
+  message?: string;
   stack?: string;
   user_message?: string;
 }
