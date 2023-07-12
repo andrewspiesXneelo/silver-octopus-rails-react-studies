@@ -48,7 +48,7 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
       },
     ];
     this.setErrorEventListeners(listeners);
-    this.setClearErrorOnNavigationListener();
+    this.clearErrorOnNavigationListener();
   }
 
   /**
@@ -71,15 +71,11 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
           stack = event.error.stack
             ? event.error.stack
             : "No stack trace available";
-
-          console.log("was event.error");
         } else {
           message = event.detail.message;
           stack = event.detail.stack
             ? event.detail.stack
             : "No stack trace available";
-
-          console.log("was event.detail");
         }
 
         const user_message = this.setErrorMessage(event.type); // get error from enum based on type -> in future we could get it from a localization file
@@ -104,18 +100,19 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
    *
    * @returns void
    */
-  setClearErrorOnNavigationListener() {
-    window.addEventListener("popstate", (event) => {
-      console.log(event);
-      this.setState({
-        hasError: false,
-        error: {
-          message: "",
-          name: "",
-          stack: "",
-          user_message: "",
-        },
-      });
+  clearErrorOnNavigationListener() {
+    window.addEventListener("popstate", () => {
+      if (this.state.hasError) {
+        this.setState({
+          hasError: false,
+          error: {
+            message: "",
+            name: "",
+            stack: "",
+            user_message: "",
+          },
+        });
+      }
     });
   }
 
