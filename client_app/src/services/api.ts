@@ -39,6 +39,7 @@ export default class APIService {
     return await fetch(`${this.apiUrl}/${path}`, requestConfig)
       .then((response) => {
         if (!response.ok) {
+          // Can't pass along an exisiting error here must raise as custom error event
           const message = response.status + ' ' + response.statusText;
           const error = new Error(message);
           return dispatchEvent(new CustomEvent('error', { detail: error }));
@@ -47,7 +48,8 @@ export default class APIService {
       })
       .then(data => data)
       .catch((error) => {
-        return dispatchEvent(new CustomEvent('error', { detail: error }));
+        throw new Error(error);
+        // return dispatchEvent(new CustomEvent('error', { detail: error }));
       });
 
   }

@@ -64,3 +64,9 @@ useEffect(() => {
   );
 }, []);
 ```
+
+8. To test api failure change endpoint in `.env.local` file from `http://localhost:3000/api/v1` to `http://localhost:3000/api/v2`. This should cause API calls to fail causing an `unhandled rejection` error to be raised by the `fetch` request.
+
+```
+VITE_API_URL=http://localhost:3000/api/v2
+```
