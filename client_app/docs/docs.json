@@ -1,0 +1,1239 @@
+{
+	"id": 0,
+	"name": "Documentation",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "main",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "main.tsx",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/main.tsx#L1"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "services/api",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 3,
+					"name": "default",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 4,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "services/api.ts",
+									"line": 21,
+									"character": 2,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L21"
+								}
+							],
+							"signatures": [
+								{
+									"id": 5,
+									"name": "new default",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "services/api.ts",
+											"line": 21,
+											"character": 2,
+											"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L21"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 3,
+										"name": "default",
+										"package": "client_app"
+									}
+								}
+							]
+						},
+						{
+							"id": 6,
+							"name": "apiUrl",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "services/api.ts",
+									"line": 14,
+									"character": 10,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L14"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "''"
+						},
+						{
+							"id": 7,
+							"name": "config",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "services/api.ts",
+									"line": 15,
+									"character": 10,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L15"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "src/services/api.ts",
+									"qualifiedName": "Config"
+								},
+								"name": "Config",
+								"package": "client_app"
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 8,
+							"name": "headers",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "services/api.ts",
+									"line": 19,
+									"character": 10,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L19"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "src/services/api.ts",
+									"qualifiedName": "Headers"
+								},
+								"name": "Headers",
+								"package": "client_app"
+							}
+						},
+						{
+							"id": 9,
+							"name": "request",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "services/api.ts",
+									"line": 33,
+									"character": 15,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L33"
+								}
+							],
+							"signatures": [
+								{
+									"id": 10,
+									"name": "request",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "services/api.ts",
+											"line": 33,
+											"character": 2,
+											"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L33"
+										}
+									],
+									"parameters": [
+										{
+											"id": 11,
+											"name": "type",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 12,
+											"name": "path",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 13,
+											"name": "data",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "any"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								4
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								6,
+								7,
+								8
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								9
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "services/api.ts",
+							"line": 12,
+							"character": 21,
+							"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L12"
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"target": 19,
+							"name": "default"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						3
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "services/api.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 14,
+			"name": "services/user",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 19,
+					"name": "default",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 20,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "services/user.ts",
+									"line": 12,
+									"character": 2,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L12"
+								}
+							],
+							"signatures": [
+								{
+									"id": 21,
+									"name": "new default",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "services/user.ts",
+											"line": 12,
+											"character": 2,
+											"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L12"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 19,
+										"name": "default",
+										"package": "client_app"
+									},
+									"overwrites": {
+										"type": "reference",
+										"target": 5,
+										"name": "default.constructor"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"target": 4,
+								"name": "default.constructor"
+							}
+						},
+						{
+							"id": 27,
+							"name": "createUser",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "services/user.ts",
+									"line": 51,
+									"character": 15,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L51"
+								}
+							],
+							"signatures": [
+								{
+									"id": 28,
+									"name": "createUser",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "createUser(user: User)\n\nCreate new user"
+											}
+										],
+										"blockTags": [
+											{
+												"tag": "@returns",
+												"content": [
+													{
+														"kind": "text",
+														"text": "Promise object represents user"
+													}
+												]
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "services/user.ts",
+											"line": 51,
+											"character": 2,
+											"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L51"
+										}
+									],
+									"parameters": [
+										{
+											"id": 29,
+											"name": "user",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "User object"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": 15,
+												"name": "User",
+												"package": "client_app"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 15,
+												"name": "User",
+												"package": "client_app"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 33,
+							"name": "deleteUser",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "services/user.ts",
+									"line": 75,
+									"character": 15,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L75"
+								}
+							],
+							"signatures": [
+								{
+									"id": 34,
+									"name": "deleteUser",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "deleteUser(id: number)\n\nDelete user"
+											}
+										],
+										"blockTags": [
+											{
+												"tag": "@returns",
+												"content": [
+													{
+														"kind": "text",
+														"text": "Promise object represents user"
+													}
+												]
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "services/user.ts",
+											"line": 75,
+											"character": 2,
+											"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L75"
+										}
+									],
+									"parameters": [
+										{
+											"id": 35,
+											"name": "id",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "User id"
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 15,
+												"name": "User",
+												"package": "client_app"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 24,
+							"name": "getUser",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "services/user.ts",
+									"line": 36,
+									"character": 15,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L36"
+								}
+							],
+							"signatures": [
+								{
+									"id": 25,
+									"name": "getUser",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "getUser(id: number)\n\nGet user by id"
+											}
+										],
+										"blockTags": [
+											{
+												"tag": "@returns",
+												"content": [
+													{
+														"kind": "text",
+														"text": "Promise object represents user"
+													}
+												]
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "services/user.ts",
+											"line": 36,
+											"character": 2,
+											"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L36"
+										}
+									],
+									"parameters": [
+										{
+											"id": 26,
+											"name": "id",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "User id"
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 15,
+												"name": "User",
+												"package": "client_app"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 22,
+							"name": "getUsers",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "services/user.ts",
+									"line": 24,
+									"character": 15,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L24"
+								}
+							],
+							"signatures": [
+								{
+									"id": 23,
+									"name": "getUsers",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "getUsers()\n\nGet all users"
+											}
+										],
+										"blockTags": [
+											{
+												"tag": "@returns",
+												"content": [
+													{
+														"kind": "text",
+														"text": "Promise object represents users"
+													}
+												]
+											},
+											{
+												"tag": "@returns",
+												"content": [
+													{
+														"kind": "text",
+														"text": "Promise object represents users"
+													}
+												]
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "services/user.ts",
+											"line": 24,
+											"character": 2,
+											"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L24"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": 15,
+													"name": "User",
+													"package": "client_app"
+												}
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 36,
+							"name": "request",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "services/api.ts",
+									"line": 33,
+									"character": 15,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L33"
+								}
+							],
+							"signatures": [
+								{
+									"id": 37,
+									"name": "request",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "services/api.ts",
+											"line": 33,
+											"character": 2,
+											"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/api.ts#L33"
+										}
+									],
+									"parameters": [
+										{
+											"id": 38,
+											"name": "type",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 39,
+											"name": "path",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 40,
+											"name": "data",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "any"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": 10,
+										"name": "default.request"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": 9,
+								"name": "default.request"
+							}
+						},
+						{
+							"id": 30,
+							"name": "updateUser",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "services/user.ts",
+									"line": 63,
+									"character": 15,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L63"
+								}
+							],
+							"signatures": [
+								{
+									"id": 31,
+									"name": "updateUser",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "updateUser(user: User)\n\nUpdate user"
+											}
+										],
+										"blockTags": [
+											{
+												"tag": "@returns",
+												"content": [
+													{
+														"kind": "text",
+														"text": "Promise object represents user"
+													}
+												]
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "services/user.ts",
+											"line": 63,
+											"character": 2,
+											"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L63"
+										}
+									],
+									"parameters": [
+										{
+											"id": 32,
+											"name": "user",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "User object"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": 15,
+												"name": "User",
+												"package": "client_app"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 15,
+												"name": "User",
+												"package": "client_app"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								20
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								27,
+								33,
+								24,
+								22,
+								36,
+								30
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "services/user.ts",
+							"line": 11,
+							"character": 21,
+							"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L11"
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"target": 3,
+							"name": "default",
+							"package": "client_app"
+						}
+					]
+				},
+				{
+					"id": 15,
+					"name": "User",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"children": [
+						{
+							"id": 18,
+							"name": "email",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "services/user.ts",
+									"line": 8,
+									"character": 2,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L8"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 16,
+							"name": "id",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "services/user.ts",
+									"line": 6,
+									"character": 2,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L6"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 17,
+							"name": "name",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "services/user.ts",
+									"line": 7,
+									"character": 2,
+									"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L7"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								18,
+								16,
+								17
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "services/user.ts",
+							"line": 5,
+							"character": 17,
+							"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L5"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						19
+					]
+				},
+				{
+					"title": "Interfaces",
+					"children": [
+						15
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "services/user.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/andrewspiesXneelo/silver-octopus-rails-react-studies/blob/0ed22d3/client_app/src/services/user.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"children": [
+				1,
+				2,
+				14
+			]
+		}
+	],
+	"packageName": "client_app",
+	"packageVersion": "1.0.0",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "# CLIENT APP\n\nThis is the client app for the API, it was generated using the "
+		},
+		{
+			"kind": "code",
+			"text": "`npm create vite@latest my-vue-app -- --template react-ts`"
+		},
+		{
+			"kind": "text",
+			"text": " command.\n\n## NOTES\n\nWill collect notes, gotchas and interesting information learned here for future reference."
+		}
+	],
+	"symbolIdMap": {
+		"1": {
+			"sourceFileName": "src/main.tsx",
+			"qualifiedName": ""
+		},
+		"2": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": ""
+		},
+		"3": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default"
+		},
+		"4": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default.__constructor"
+		},
+		"5": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default"
+		},
+		"6": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default.apiUrl"
+		},
+		"7": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default.config"
+		},
+		"8": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default.headers"
+		},
+		"9": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default.request"
+		},
+		"10": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default.request"
+		},
+		"11": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "type"
+		},
+		"12": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "path"
+		},
+		"13": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "data"
+		},
+		"14": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": ""
+		},
+		"15": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "User"
+		},
+		"16": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "User.id"
+		},
+		"17": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "User.name"
+		},
+		"18": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "User.email"
+		},
+		"19": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default"
+		},
+		"20": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.__constructor"
+		},
+		"21": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default"
+		},
+		"22": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.getUsers"
+		},
+		"23": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.getUsers"
+		},
+		"24": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.getUser"
+		},
+		"25": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.getUser"
+		},
+		"26": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "id"
+		},
+		"27": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.createUser"
+		},
+		"28": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.createUser"
+		},
+		"29": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "user"
+		},
+		"30": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.updateUser"
+		},
+		"31": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.updateUser"
+		},
+		"32": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "user"
+		},
+		"33": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.deleteUser"
+		},
+		"34": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "default.deleteUser"
+		},
+		"35": {
+			"sourceFileName": "src/services/user.ts",
+			"qualifiedName": "id"
+		},
+		"36": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default.request"
+		},
+		"37": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "default.request"
+		},
+		"38": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "type"
+		},
+		"39": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "path"
+		},
+		"40": {
+			"sourceFileName": "src/services/api.ts",
+			"qualifiedName": "data"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "out": "./docs",
+  "json": "./docs/docs.json",
+  "name": "Documentation",
+  "excludeExternals": true,
+  "includeVersion": true,
+  "entryPoints": ["src/main.tsx", "src/services"],
+  "tsconfig": "./tsconfig.json"
+}
