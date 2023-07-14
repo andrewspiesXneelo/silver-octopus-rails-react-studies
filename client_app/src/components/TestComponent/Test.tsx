@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import UserService from "../../services/user";
+import AltTest from "./Alt_Test";
 
 interface TestUser {
   id: number;
-  name: string;
-  email: string;
+  name?: string;
+  email?: string;
 }
 
 const Test = () => {
@@ -36,9 +37,16 @@ const Test = () => {
         <div className="test-list">
           {users &&
             users.map((user: TestUser) => (
-              <div className="test-list-item" key={user.id}>
-                <h3>{user.name}</h3>
-                <p>{user.email}</p>
+              <div key={user.id}>
+                <div className="test-list-item">
+                  <h3>{user.name}</h3>
+                  <p>{user.email}</p>
+                </div>
+                <AltTest
+                  testData={
+                    "Here is a piece of data passed to the child AltTest prop"
+                  }
+                />
               </div>
             ))}
         </div>
