@@ -67,7 +67,7 @@ export default class ErrorProvider extends Component<ErrorProps, ErrorState> {
 
         // Need to check if it's a custom error event or custom error with a response - can improve this
         if (!event.detail) {
-          message = event.error.message;
+          message = event.error.message || "";
           stack = event.error.stack
             ? event.error.stack
             : "No stack trace available";

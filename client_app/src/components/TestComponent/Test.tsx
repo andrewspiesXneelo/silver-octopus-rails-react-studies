@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import UserService from "../../services/user";
-import AltTest from "./Alt_Test";
+// import AltTest from "./Alt_Test";
 
 interface TestUser {
   id: number;
@@ -13,21 +14,10 @@ const Test = () => {
 
   useEffect(() => {
     const userSrv = new UserService();
-
     const fetchUsers = async () => {
       return userSrv.getUsers().then((res) => res);
     };
     fetchUsers().then((res) => setUsers(res));
-    // throw new Error("Test Error");
-    // dispatchEvent(
-    //   new CustomEvent("error", {
-    //     detail: {
-    //       message: "error found!",
-    //       name: "error",
-    //       stack: window.location.href,
-    //     },
-    //   })
-    // );
   }, []);
 
   return (
@@ -42,11 +32,11 @@ const Test = () => {
                   <h3>{user.name}</h3>
                   <p>{user.email}</p>
                 </div>
-                <AltTest
+                {/* <AltTest
                   testData={
                     "Here is a piece of data passed to the child AltTest prop"
                   }
-                />
+                /> */}
               </div>
             ))}
         </div>
